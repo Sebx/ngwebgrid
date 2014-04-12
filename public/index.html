@@ -13,9 +13,18 @@
 </head>
 <body>
 
- 
-  <div ng-controller="MainCtrl">
-    <ngwebgrid />
+  <h1>Proyects</h1> 
+    <div ng-controller="ProyectsCtrl">
+      <ngwebgrid>
+      </ngwebgrid>
+  </div>
+
+
+
+  <h1>Proyects types</h1>
+    <div ng-controller="ProyectsTypesCtrl">
+      <ngwebgrid>
+      </ngwebgrid>
   </div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -25,7 +34,9 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.7/ng-grid.js"></script>
 
   <script src="assets/javascripts/angular/main.js"></script>
-  <script src="assets/javascripts/angular/controllers/ngwebgrid_ctrl.js"></script>
+  <script src="assets/javascripts/angular/controllers/proyects_ctrl.js"></script>
+  <script src="assets/javascripts/angular/controllers/proyecttypes_ctrl.js"></script>
   <script src="assets/javascripts/angular/services/service.js"></script>
+  <script src="assets/javascripts/angular/controllers/ngwebgrid_ctrl.js"></script>
 </body>
 </html>

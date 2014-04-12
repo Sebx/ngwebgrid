@@ -1,6 +1,7 @@
 app.controller('ComponentCtrl', ['$scope', 'Service', '$filter', function($scope, Service, $filter) {
   $scope.data = Service.all($scope.service);
   $scope.currentSelections = [];
+  $scope.form = {};
 
   $scope.create = function() {
     var attr = $scope.form;
@@ -40,7 +41,22 @@ app.directive('ngwebgrid', function() {
     restrict: 'AE',
     scope: true,
     replace: 'true',
-    templateUrl: 'ngwgtemplate.html'
+    controller: "ComponentCtrl",
+    template: '<div id="ngwebgrid"> \
+      <div class="gridStyle" ng-grid="gridOptions"></div> \
+        <form ng-submit="create()"> \
+          <div ng-switch on="createtemplate"> \
+              <div ng-switch-when="create-template"><create-template></create-template></div> \
+              <div ng-switch-when="create-template2"><create-template2></create-template2></div> \
+              <div ng-switch-when="create-template3"><create-template3></create-template3></div> \
+              <div ng-switch-when="create-template4"><create-template4></create-template4></div> \
+              <div ng-switch-default><create-template></create-template></div> \
+          </div> \
+          <input type="submit" value="Add"> \
+          <input type="button" ng-click="update()" value="Update"> \
+          <input type="button" ng-click="delete()" value="Delete"> \
+        </form> \
+      </div>'
   };
 });
 
