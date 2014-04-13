@@ -1,3 +1,19 @@
 == README
 RESTful grid with minimal configuration required. Nggrid based, simple code. Feel free to fork and make it better. Draft demo done in rails. 
 See the source on the public folder.
+
+---
+
+* Steps tu use the grid
+ 
+ 1.Download the proyect.
+
+ 2.*cd* on proyect folder
+
+ 2.*bundle install*
+
+ 3.*rails server*
+
+ 4.Open an browser in :*localhost:3000*
+
+ 5.wuala!
